@@ -1,0 +1,202 @@
+<html>
+<head>
+<title> Reservoir Data</title>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
+<script src="liquidFillGauge.js" language="JavaScript"></script>
+<style>
+.liquidFillGaugeText { font-family: Helvetica; font-weight: bold; }
+</style>
+</head>
+<body>
+	<script type="text/javascript">
+setInterval(function()
+{
+    var v1=Math.floor(Math.random()*1111);
+    var v2=Math.floor(Math.random()*1111);
+    var v3=Math.floor(Math.random()*1111);
+    var v4=Math.floor(Math.random()*1111);
+    var v5=Math.floor(Math.random()*1111);
+	$('#d1').highcharts({
+        chart: {
+            type: 'boxplot'
+        },         
+        series: [{
+            name: 'Observations',
+            data: [
+                [v1,v2,v3,v4,v5],               
+            ],            
+        }, ]
+    });
+    var v1=Math.floor(Math.random()*1111);
+    var v2=Math.floor(Math.random()*1111);
+    var v3=Math.floor(Math.random()*1111);
+    var v4=Math.floor(Math.random()*1111);
+    var v5=Math.floor(Math.random()*1111);
+	$('#d2').highcharts({
+        chart: {
+            type: 'boxplot'
+        },         
+        series: [{
+            name: 'Observations',
+            data: [
+                [v1,v2,v3,v4,v5],               
+            ],            
+        }, ]
+    });
+    var v1=Math.floor(Math.random()*1111);
+    var v2=Math.floor(Math.random()*1111);
+    var v3=Math.floor(Math.random()*1111);
+    var v4=Math.floor(Math.random()*1111);
+    var v5=Math.floor(Math.random()*1111);
+	$('#d3').highcharts({
+        chart: {
+            type: 'boxplot'
+        },         
+        series: [{
+            name: 'Observations',
+            data: [
+                [v1,v2,v3,v4,v5],               
+            ],            
+        }, ]
+    });
+    var v1=Math.floor(Math.random()*1111);
+    var v2=Math.floor(Math.random()*1111);
+    var v3=Math.floor(Math.random()*1111);
+    var v4=Math.floor(Math.random()*1111);
+    var v5=Math.floor(Math.random()*1111);
+	$('#d4').highcharts({
+        chart: {
+            type: 'boxplot'
+        },         
+        series: [{
+            name: 'Observations',
+            data: [
+                [v1,v2,v3,v4,v5],               
+            ],            
+        }, ]
+    });
+    var v1=Math.floor(Math.random()*1111);
+    var v2=Math.floor(Math.random()*1111);
+    var v3=Math.floor(Math.random()*1111);
+    var v4=Math.floor(Math.random()*1111);
+    var v5=Math.floor(Math.random()*1111);
+	$('#d5').highcharts({
+        chart: {
+            type: 'boxplot'
+        },         
+        series: [{
+            name: 'Observations',
+            data: [
+                [v1,v2,v3,v4,v5],               
+            ],            
+        }, ]
+    });
+    var v1=Math.floor(Math.random()*1111);
+    var v2=Math.floor(Math.random()*1111);
+    var v3=Math.floor(Math.random()*1111);
+    var v4=Math.floor(Math.random()*1111);
+    var v5=Math.floor(Math.random()*1111);
+	$('#d6').highcharts({
+        chart: {
+            type: 'boxplot'
+        },         
+        series: [{
+            name: 'Observations',
+            data: [
+                [v1,v2,v3,v4,v5],               
+            ],            
+        }, ]
+    });
+
+    var v1=Math.floor(Math.random()*111);
+    var gauge1 = loadLiquidFillGauge("fillgauge1", v1);
+    var v2=Math.floor(Math.random()*111);
+    var gauge2= loadLiquidFillGauge("fillgauge2", v2);
+    var v3=Math.floor(Math.random()*111);
+    var gauge3 = loadLiquidFillGauge("fillgauge3", v3);
+    var v4=Math.floor(Math.random()*111);
+    var gauge4 = loadLiquidFillGauge("fillgauge4", v4);
+    var v5=Math.floor(Math.random()*111);
+    var gauge5 = loadLiquidFillGauge("fillgauge5", v5);
+    var v6=Math.floor(Math.random()*111);
+    var gauge6 = loadLiquidFillGauge("fillgauge6", v6);
+
+    function NewValue(){
+        if(Math.random() > .5){
+            return Math.round(Math.random()*100);
+        } else {
+            return (Math.random()*100).toFixed(1);
+        }
+    }
+
+},5500);
+	</script>
+
+<div class="container">
+	<h3 class="text-center">  Various Reservoir Condition </h3>
+<div class="row">
+	<div class="col-sm-4">
+		<h3 class="text-success">Trinity Lake</h3>
+		<div id="d1" style="height: 200px; max-width: 200px"></div>
+	</div>
+	<div class="col-sm-4">
+		<h3 class="text-success">Shasta Reservoir</h3>
+		<div id="d2" style="height: 200px; max-width: 200px"> </div>
+	</div>
+	<div class="col-sm-4">
+		<h3 class="text-success">Lake Oraville</h3>
+        <div id="d3" style="height: 200px; max-width: 200px"> </div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-4">
+		<h3 class="text-success">Perris Lake</h3>
+		<div id="d4" style="height: 200px; max-width: 200px"> </div>
+	</div>
+	<div class="col-sm-4">
+		<h3 class="text-success">Castaic Lake</h3>
+		<div id="d5" style="height: 200px; max-width: 200px"> </div>
+	</div>
+	<div class="col-sm-4">
+		<h3 class="text-success">Folsom Lake</h3>
+		<div id="d6" style="height: 200px; max-width: 200px"> </div>
+	</div>
+</div>
+<h3 class="text-center"> Liquid Gauge </h3>
+<div class="row">
+	<div class="col-sm-4">
+		<h3 class="text-success">Trinity Lake</h3>
+		<svg id="fillgauge1" width="19%" height="200" onclick="gauge1.update(NewValue());"></svg>
+	</div>
+	<div class="col-sm-4">
+		<h3 class="text-success">Shasta Reservoir</h3>
+		<svg id="fillgauge2" width="19%" height="200" onclick="gauge2.update(NewValue());"></svg>
+	</div>
+	<div class="col-sm-4">
+		<h3 class="text-success"> Lake Oraville</h3>
+		<svg id="fillgauge3" width="19%" height="200" onclick="gauge3.update(NewValue());"></svg>
+	</div>
+</div>
+<div class="row">	
+	<div class="col-sm-4">
+		<h3 class="text-success">PerrisLake</h3>
+		<svg id="fillgauge4" width="19%" height="200" onclick="gauge4.update(NewValue());"></svg>
+	</div>
+	<div class="col-sm-4">
+		<h3 class="text-success">Castaic Lake</h3>
+		<svg id="fillgauge5" width="19%" height="200" onclick="gauge5.update(NewValue());"></svg>
+	</div>
+	<div class="col-sm-4">
+		<h3 class="text-success">Folsom Lake</h3>
+		<svg id="fillgauge6" width="19%" height="200" onclick="gauge6.update(NewValue());"></svg>
+	</div>
+</div>
+</div>
+</body>
+</html>
